@@ -2,7 +2,7 @@ import json
 import pandas as pd
 from io import StringIO
 
-from generics import GenericORM
+from generics import BasicORM
 
 """ 
 Generic Data Entry: 
@@ -22,7 +22,7 @@ for header in df.columns:
 
 # Prints the existing list of tuples in the CSV file 
 # after initializing a generic class instance.
-generic = GenericORM()
+generic = BasicORM()
 data_list = []
 for value in df.itertuples():
     for x, header in enumerate(header_attributes):
@@ -31,7 +31,7 @@ for value in df.itertuples():
 print(data_list)
 
 # Creates a new generic item prompting user for inputs
-new_generic = GenericORM()
+new_generic = BasicORM()
 for header in header_attributes:
     value = input(f'Enter {header}: ')
     setattr(new_generic, header, value)
