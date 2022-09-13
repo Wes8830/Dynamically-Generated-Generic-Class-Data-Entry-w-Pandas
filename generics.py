@@ -10,4 +10,7 @@ class GenericORM:
 
 
 class BasicORM:
+    """
+    So is this.
+    """
     pass
